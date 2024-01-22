@@ -1,0 +1,69 @@
+:root {
+  --primary-color: #399af4;
+  --primary-color-light: #51a6f6;
+  --primary-color-dark: #00a5e4;
+
+  --secondary-color: #f58220;
+  --secondary-color-dark: #e26d0a;
+
+  --color-outline: #f1f4f7;
+  --color-outline-1: #f0f7fb;
+  --color-outline-2: #223344;
+
+  --white-color: #fff;
+  --gold-color: #ffa500;
+
+  --grey-color-light-1: #faf9f9;
+  --grey-color-light-2: #f4f2f2;
+  --grey-color-light-3: #f0eeee;
+  --grey-color-light-4: #ccc;
+  --grey-color-light-5: #a8a6a6;
+
+  --black-color-light: #777;
+  --black-color-dark: #1a1a1a;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --search-shadow: 0.1rem 0.1rem 50px rgba(0, 0, 0, 0.08);
+  --btn-shadow: 0 0.2rem 0 rgb(227, 108, 10);
+
+  --line: 1px solid var(--grey-color-light-4);
+}
+
+//BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black-color-light);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--primary-color-light),
+    var(--primary-color-dark)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+}
