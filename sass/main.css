@@ -263,6 +263,13 @@ body {
   color: var(--white-color);
   padding: 2.5rem;
 }
+.legal .x-link:link, .legal .x-link:visited {
+  text-decoration: underline;
+  color: inherit;
+}
+.legal .x-link:hover, .legal .x-link:active {
+  color: var(--primary-color);
+}
 @media only screen and (max-width: 56.25em) {
   .legal {
     display: none;
@@ -277,10 +284,11 @@ body {
   margin: 1rem 2rem;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc(34.3333333333% - 1.2rem);
+  grid-auto-columns: calc(33.3333333333% - 1rem);
   gap: 1.2rem;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-snap-type: none;
 }
 .gallery::-webkit-scrollbar {
   display: none;
@@ -290,6 +298,8 @@ body {
   display: block;
   position: relative;
   transition: all 0.2s;
+  cursor: grab;
+  user-select: none;
 }
 .gallery__photo--1 {
   grid-column: 1/2;
@@ -319,6 +329,13 @@ body {
   align-items: center;
   border-bottom: var(--line);
 }
+@media only screen and (max-width: 24em) {
+  .overview {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+}
 .overview__heading {
   font-size: 2.25rem;
   font-weight: 500;
@@ -332,6 +349,12 @@ body {
     padding: 1.25rem 2rem;
   }
 }
+@media only screen and (max-width: 24em) {
+  .overview__heading {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+}
 .overview__stars {
   margin-right: auto;
   display: flex;
@@ -340,7 +363,7 @@ body {
   width: 1.75rem;
   height: 1.75rem;
 }
-@media only screen and (max-width: 41rem) {
+@media only screen and (max-width: 35em) {
   .overview__icon-star {
     display: none;
   }
@@ -360,10 +383,20 @@ body {
 }
 .overview__rating-average {
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--white-color);
   margin-left: 3rem;
   padding: 0.5rem 0.7rem;
   border-radius: 3px;
+}
+@media only screen and (max-width: 31em) {
+  .overview__rating-average {
+    margin: 0 2.1rem;
+  }
+}
+@media only screen and (max-width: 24em) {
+  .overview__rating-average {
+    margin: 0 auto 0 3rem;
+  }
 }
 .overview__rating-count {
   color: var(--primary-color);
@@ -371,6 +404,16 @@ body {
 }
 .overview__rating-count span {
   color: var(--black-color-light);
+}
+@media only screen and (max-width: 31em) {
+  .overview__rating-count {
+    display: none;
+  }
+}
+@media only screen and (max-width: 24em) {
+  .overview__rating-count {
+    display: inline-block;
+  }
 }
 
 .btn-inline {
